@@ -1,46 +1,61 @@
 import React from "react";
 import "./Navbar.css";
-import {Link} from 'react-router-dom'
+import { Link, useLocation } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 export default function Navbar() {
   return (
     <>
       <div className="info">
-        <h1 style={{ margin: 0 }}>Alexandra Min</h1>
+        <h1 style={{ margin: 0 }}>Alex Min</h1>
         <div className="info-bar">
           <p className="info-item">alexmin@college.harvard.edu</p>
         </div>
         <div className="info-bar">
-          <Link 
-            classname={"info-link"}
-            to = {{pathname: 'https://instagram.com'}}
-            target = "_blank"
+          <Link
+            className="info-link"
+            to={{ pathname: "https://github.com/mpek66" }}
+            target="_blank"
           >
-            Instagram
+            GitHub
           </Link>
-
-          <Link 
-            classname={"info-link"}
-            to={{pathname: 'https://spotify.com'}}
-            target = "_blank"
+          <Link
+            className="info-link"
+            to={{ pathname: "https://www.linkedin.com/in/mark-pekala/" }}
+            target="_blank"
+          >
+            LinkedIn
+          </Link>
+          <Link
+            className="info-link"
+            to={{ pathname: "https://spotify.com" }}
+            target="_blank"
           >
             Spotify
-          </Link>
-          
-          <Link 
-            classname={"info-link"}
-            to={{pathname: 'https://google.com'}}
-            target = "_blank"
-          >
-            Google
           </Link>
         </div>
       </div>
       <div className="nav-background">
-        <Link to = {{pathname: "/about"}}>About</Link>
-        <Link to = {{pathname: "/experience"}}>Experience</Link>
-        <Link to = {{pathname: "/projects"}}>Projects</Link>
-        <Link to = {{pathname: "/education"}}>Education</Link>
+        <div className="nav-item">
+          <NavLink className="nav-link" activeClassName="active" to={{ pathname: "/about" }}>
+            About
+          </NavLink>
+        </div>
+        <div className="nav-item">
+          <NavLink className="nav-link" to={{ pathname: "/experience" }}>
+            Experience
+          </NavLink>
+        </div>
+        <div className="nav-item">
+          <NavLink className="nav-link" to={{ pathname: "/projects" }}>
+            Projects
+          </NavLink>
+        </div>
+        <div className="nav-item">
+          <NavLink className="nav-link" to={{ pathname: "/education" }}>
+            Education
+          </NavLink>
+        </div>
       </div>
     </>
   );

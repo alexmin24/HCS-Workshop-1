@@ -17,8 +17,6 @@
 }
 
 .timeline-item:hover {
-  -webkit-transform: scale(2);
-  transform: scale(2);
   background-color: cornflowerblue;
 }
 

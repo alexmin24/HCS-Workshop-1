@@ -25,7 +25,8 @@ function App() {
         <Switch>
           <Route path="/experience" component={ExperienceScreen} />
           <Route path="/projects" component={ProjectsScreen} />
-          
+          <Route path="/education" component={EducationScreen}/>
+          <Route path={["/about", "/"]} component={AboutScreen} />
         </Switch>
       </Router>
     </div>
